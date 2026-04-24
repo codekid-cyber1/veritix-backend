@@ -1,7 +1,7 @@
-import { MigrationInterface, QueryRunner } from "typeorm";
+import { MigrationInterface, QueryRunner } from 'typeorm';
 
 export class AddVerificationFields1776906641125 implements MigrationInterface {
-    name = 'AddVerificationFields1776906641125'
+    name = 'AddVerificationFields1776906641125';
 
     public async up(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.query(`ALTER TABLE "users" ADD "verificationCode" character varying`);
