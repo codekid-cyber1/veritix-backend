@@ -40,4 +40,10 @@ export class User {
 
   @DeleteDateColumn()
   deletedAt: Date;
+
+  @Column({ nullable: true })
+  verificationCode: string;
+
+  @Column({ type: 'timestamp', nullable: true })
+  verificationCodeExpiresAt: Date;
 }
